@@ -154,7 +154,7 @@ download()
 	local text="${2:-files}"
 	e "Downloading $text"
 	$download "$1" >> $INSTALL_LOG 2>> $ERROR_LOG || ee "Downloading $text failed"
-	e "Downloading $text successfull"
+	e "Downloading $text finished"
 	return 0
 }
 
@@ -188,13 +188,14 @@ for dep in ${DEPENDENCIES[@]}; do
 done
 
 
-e "Installing $NAME $VER"
 
 if [ -f $DIR/chkrootkit.tar.gz ]; then
 	cp $DIR/chkrootkit.tar.gz $TMP
 else
 	download ftp://ftp.pangeia.com.br/pub/seg/pac/chkrootkit.tar.gz "$NAME $VER files"
 fi
+
+e "Installing $NAME $VER"
 
 tar -xzf chkrootkit.tar.gz >> $INSTALL_LOG 2>> $ERROR_LOG
 cp -r chkrootkit-* /usr/src/chkrootkit
