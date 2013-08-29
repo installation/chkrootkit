@@ -27,7 +27,7 @@ Dependencies will be installed during the progress, but installing them on your 
 
 ## Installation
 
-Download and run ````install.sh````
+Download and run ````install.sh YOUR@EMAIL.COM````
 
 ### Offline installation
 
@@ -35,7 +35,7 @@ Clone this repository or download ````install.sh```` and download the following 
 
 [Chkrootkit Archive](ftp://ftp.pangeia.com.br/pub/seg/pac/chkrootkit.tar.gz)
 
-Run ````install.sh````
+Run ````install.sh YOUR@EMAIL.COM````
 
 Create file ````/etc/cron.daily/chkrootkit.sh```` with execute permission, and paste the following content:
 ````
