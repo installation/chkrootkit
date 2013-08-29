@@ -223,6 +223,7 @@ case ${install[2]} in
 esac
 
 install_deps
+[ `which gcc 2> /dev/null` ] || install "gcc"
 
 
 if [ -f $DIR/chkrootkit.tar.gz ]; then
