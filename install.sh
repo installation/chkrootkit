@@ -245,7 +245,7 @@ chmod +x chkrootkit
 
 e "Installing cron script"
 echo "#!/bin/sh
-( /usr/bin/chkrootkit ) | grep 'INFECTED|Vulnerable' | /bin/mail -E -s 'chrootkit Hourly Run ($(hostname))' $1" >> /etc/cron.daily/chkrootkit.sh
+( /usr/bin/chkrootkit ) | grep 'INFECTED|Vulnerable' | /bin/mail -E -s 'chrootkit Daily Run ($(hostname))' $1" >> /etc/cron.daily/chkrootkit.sh
 chmod 755 /etc/cron.daily/chkrootkit.sh
 
 cleanup

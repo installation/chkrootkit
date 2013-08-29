@@ -40,7 +40,7 @@ Run ````install.sh YOUR@EMAIL.COM````
 Create file ````/etc/cron.daily/chkrootkit.sh```` with execute permission, and paste the following content:
 ````
 #!/bin/sh
-( /usr/bin/chkrootkit ) | grep 'INFECTED|Vulnerable' | /bin/mail -E -s 'chrootkit Hourly Run (HOSTNAME)' YOUR@EMAIL.COM
+( /usr/bin/chkrootkit ) | grep 'INFECTED|Vulnerable' | /bin/mail -E -s 'chrootkit Daily Run (HOSTNAME)' YOUR@EMAIL.COM
 ````
 
 Note: You can run your cron jobs whenever you want.
