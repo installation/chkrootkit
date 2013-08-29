@@ -20,6 +20,7 @@ By default, the installer logs into ````$TMP/install.log```` and ````$TMP/error.
 * HTTP Client (curl, wget or fetch)
 * TAR executable
 * Make
+* GCC
 * Mail (Debian/Ubuntu: mailutils, RHEL: mailx)
 
 Dependencies will be installed during the progress, but installing them on your own is advised.
