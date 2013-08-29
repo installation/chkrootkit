@@ -196,7 +196,7 @@ else
 	download ftp://ftp.pangeia.com.br/pub/seg/pac/chkrootkit.tar.gz "$NAME $VER files"
 fi
 
-tar -xvf chkrootkit.tar.gz >> $INSTALL_LOG 2>> $ERROR_LOG
+tar -xzf chkrootkit.tar.gz >> $INSTALL_LOG 2>> $ERROR_LOG
 cp -r chkrootkit-* /usr/src/chkrootkit
 cd /usr/src/chkrootkit
 
