@@ -213,7 +213,6 @@ fi
 # Adding dependencies
 case ${install[2]} in
 	dpkg )
-		dep "glibc"
 		dep "mailutils"
 		;;
 	rpm )
